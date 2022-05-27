@@ -420,10 +420,10 @@
             </div>
           </div>
           <div class="form-group mt-3">
-            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required />
+            <input type="text" class="form-control" name="subject" id="phone" placeholder="Phone Number" required />
           </div>
           <div class="form-group mt-3">
-            <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+            <textarea class="form-control" name="message" id="message" rows="5" placeholder="Message" required></textarea>
           </div>
          
           <div class="text-center"><button type="submit">Connet With Me</button></div>
@@ -447,15 +447,18 @@
     <script>
       function sendEmail(){
         Email.send({
-          Host : "smtp.gmail.com",
+          Host : "smtp.elasticemail.com",
           Username : "vitoandareas15@gmail.com",
-          Password : "pasussmanju123",
-          To : 'them@website.com',
-          From : "you@isp.com",
-          Subject : "This is the subject",
-          Body : "And this is the body"
+          Password : "117CAAC0A421EA2B307FED39ABD5C87E14F0",
+          To : 'vitoandareas15@gmail.com',
+          From : document.getElementById("email").value,
+          Subject : "Pesan dari web Porto",
+          Body : "Name: " + document.getElementById("name").value
+                  + "<br> Email: " + document.getElementById("email").value
+                  + "<br> Phone Number: " + document.getElementById("phone").value
+                  + "<br> Message: " + document.getElementById("message").value
       }).then(
-        message => alert(message)
+        message => alert("Message Sent Succesfully")
       );
       }
     </script>
