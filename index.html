@@ -7,6 +7,28 @@
     <title>M A N I K</title>
     <meta content="" name="description" />
     <meta content="" name="keywords" />
+        <!-- Rotate Message -->
+
+        <style>
+          @media only screen and (orientation: landscape) {
+            #message {
+              display: none;
+            }
+            #contents {
+              display: block;
+            }
+          }
+          @media only screen and (orientation: portrait) {
+            #message {
+              display: block;
+            }
+            #contents {
+              display: none;
+            }
+          }
+        </style>
+    
+        <!-- Akhir Rotate Message -->
 
     <!-- Favicons -->
     <link href="assets/img/ryzen.png" rel="icon" />
@@ -29,6 +51,11 @@
 
   <body>
     <!-- ======= Header ======= -->
+        <!-- Rotate Message -->
+        <div id="message" style="font-size: 30px;color: goldenrod; text-align: center;margin-top: 50%;" ><strong> PLEASE ROTATE TO LANDSCAPE FOR BETTER EXPERIENCE</strong><br><i class="bi bi-phone-landscape" style="color:yellow ;"></i></div>
+        <div id="contents">
+    
+          <!-- Akhir Rotate Message -->
     <header id="header">
       <div class="container">
         <h1><a href="index.html">M A N I K</a></h1>
